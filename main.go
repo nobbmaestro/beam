@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"os"
 
 	"github.com/nobbmaestro/beam/cmd"
@@ -17,6 +18,7 @@ func main() {
 
 	err := cmd.Execute()
 	if err != nil {
+		fmt.Errorf("%w", err)
 		os.Exit(1)
 	}
 }
